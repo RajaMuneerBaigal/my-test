@@ -178,7 +178,7 @@
     }
   ],
   "api": {
-    "baseUrl": "https://app.gpt-trainer.com/api",
+    "baseUrl": "https://app.chatsistant.com/api",
     "auth": {
       "method": "bearer"
     }

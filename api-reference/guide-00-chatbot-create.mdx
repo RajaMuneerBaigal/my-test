@@ -18,7 +18,7 @@ Before you begin, make sure you have the following:
 The API endpoint for creating a chatbot is:
 
 ```
-https://app.gpt-trainer.com/api/v1/chatbot/create
+https://app.chatsistant.com/api/v1/chatbot/create
 ```
 
 ### Request Body
@@ -57,7 +57,7 @@ Here're example command sto create a chatbot using the GPT-trainer API:
 <CodeGroup>
 
 ```bash Curl
-curl --location --request POST 'https://app.gpt-trainer.com/api/v1/chatbot/create' \
+curl --location --request POST 'https://app.chatsistant.com/api/v1/chatbot/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <token>' \
 --data-raw '{
@@ -75,7 +75,7 @@ curl --location --request POST 'https://app.gpt-trainer.com/api/v1/chatbot/creat
 ```py Python
 import requests
 
-url = 'https://app.gpt-trainer.com/api/v1/chatbot/create'
+url = 'https://app.chatsistant.com/api/v1/chatbot/create'
 headers = {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer <token>'
@@ -105,7 +105,7 @@ else:
 ```ts JavaScript
 const axios = require("axios");
 
-const url = "https://app.gpt-trainer.com/api/v1/chatbot/create";
+const url = "https://app.chatsistant.com/api/v1/chatbot/create";
 const headers = {
   "Content-Type": "application/json",
   Authorization: "Bearer <token>",
@@ -165,7 +165,7 @@ Chatbot's `uuid` will be used in following guides.
 Use the following API endpoint to get the list of agents for a chatbot:
 
 ```
-https://app.gpt-trainer.com/api/v1/chatbot/{chatbot_uuid}/agents
+https://app.chatsistant.com/api/v1/chatbot/{chatbot_uuid}/agents
 ```
 
 #### Example Response
@@ -199,7 +199,7 @@ After chatbot creation, a default General QA AI agent is like the one shown in t
 After getting the list of agents, you can update the agent by sending a POST request to the following API endpoint:
 
 ```
-https://app.gpt-trainer.com/api/v1/agent/{uuid}/update
+https://app.chatsistant.com/api/v1/agent/{uuid}/update
 ```
 
 Please refer to [Update Agent API reference](/api-reference/agents/update) and the [Agent Properties Reference](/api-reference/agents/properties-reference) for detailed information on updating agent's properties.
@@ -211,7 +211,7 @@ Please refer to [Update Agent API reference](/api-reference/agents/update) and t
 <CodeGroup>
 
 ```bash Curl
-curl --location --request POST 'https://app.gpt-trainer.com/api/v1/agent/{uuid}/update' \
+curl --location --request POST 'https://app.chatsistant.com/api/v1/agent/{uuid}/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <token>' \
 --data-raw '{
@@ -229,7 +229,7 @@ curl --location --request POST 'https://app.gpt-trainer.com/api/v1/agent/{uuid}/
 import requests
 
 uuid = '<agent-uuid>'
-url = f'https://app.gpt-trainer.com/api/v1/agent/{uuid}/update'
+url = f'https://app.chatsistant.com/api/v1/agent/{uuid}/update'
 headers = {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer <token>'
@@ -259,7 +259,7 @@ else:
 const axios = require("axios");
 
 const uuid = "<agent-uuid>";
-const url = `https://app.gpt-trainer.com/api/v1/agent/${uuid}/update`;
+const url = `https://app.chatsistant.com/api/v1/agent/${uuid}/update`;
 const headers = {
   "Content-Type": "application/json",
   Authorization: "Bearer <token>",

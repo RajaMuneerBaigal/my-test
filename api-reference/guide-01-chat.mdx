@@ -29,7 +29,7 @@ Before sending messages to the chatbot, it's essential to create a chat session.
 
 ### Create a chat session
 
-To create a chat session, you need to use a POST request to the API endpoint: `https://app.gpt-trainer.com/api/v1/chatbot/{chatbot_uuid}/session/create`.
+To create a chat session, you need to use a POST request to the API endpoint: `https://app.chatsistant.com/api/v1/chatbot/{chatbot_uuid}/session/create`.
 
 <Warning>
   Make sure to replace `{chatbot_uuid}` with the UUID of your chatbot.
@@ -44,7 +44,7 @@ Here're example command to create a chatbot using the GPT-trainer API:
 <CodeGroup>
 
 ```bash Curl
-curl --location --request POST 'https://app.gpt-trainer.com/api/v1/chatbot/{chatbot_uuid}/session/create' \
+curl --location --request POST 'https://app.chatsistant.com/api/v1/chatbot/{chatbot_uuid}/session/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <token>' \
 ```
@@ -52,7 +52,7 @@ curl --location --request POST 'https://app.gpt-trainer.com/api/v1/chatbot/{chat
 ```py Python
 import requests
 
-url = 'https://app.gpt-trainer.com/api/v1/chatbot/{chatbot_uuid}/session/create'
+url = 'https://app.chatsistant.com/api/v1/chatbot/{chatbot_uuid}/session/create'
 headers = {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer <token>'
@@ -73,7 +73,7 @@ else:
 const axios = require("axios");
 
 const url =
-  "https://app.gpt-trainer.com/api/v1/chatbot/{chatbot_uuid}/session/create";
+  "https://app.chatsistant.com/api/v1/chatbot/{chatbot_uuid}/session/create";
 const headers = {
   "Content-Type": "application/json",
   Authorization: "Bearer <token>",
@@ -113,7 +113,7 @@ This API request returns JSON data that you can reuse to send messages:
 
 With a chat session created, you can now send messages to your chatbot.
 Use the following API endpoint to send messages and get a streamed AI response:\
-`https://app.gpt-trainer.com/api/v1/session/{session_uuid}/message/stream`
+`https://app.chatsistant.com/api/v1/session/{session_uuid}/message/stream`
 
 <Warning>
   Make sure to replace `{session_uuid}` with the `uuid` obtained from the chat
@@ -128,7 +128,7 @@ Here're example command to create a message using the GPT-trainer API:
 
 <CodeGroup>
     ```bash Curl
-curl --location --request POST 'https://app.gpt-trainer.com/api/v1/session/{session_uuid}/message/stream' \
+curl --location --request POST 'https://app.chatsistant.com/api/v1/session/{session_uuid}/message/stream' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
 --data-raw '{"query": "Your query goes here"}'
@@ -137,7 +137,7 @@ curl --location --request POST 'https://app.gpt-trainer.com/api/v1/session/{sess
 ```py Python
 import requests
 
-url = f"https://app.gpt-trainer.com/api/v1/session/{session_uuid}/message/stream"
+url = f"https://app.chatsistant.com/api/v1/session/{session_uuid}/message/stream"
 headers = {
     "Authorization": "Bearer YOUR_ACCESS_TOKEN",
     "Content-Type": "application/json"
@@ -161,7 +161,7 @@ else:
 const xhr = new XMLHttpRequest();
 xhr.open(
   "POST",
-  `https://app.gpt-trainer.com/api/v1/session/{session_uuid}/message/stream`,
+  `https://app.chatsistant.com/api/v1/session/{session_uuid}/message/stream`,
   true
 );
 
