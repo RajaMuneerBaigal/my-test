@@ -24,7 +24,7 @@ It is essential to set up an API endpoint that will handle the verification of u
 
 1. **Specify the API Endpoint:** In your chatbot settings, provide the URL of the API endpoint. This is the server address where the token verification requests will be sent.
 
-2. **Configure for POST Requests:** Ensure that your API endpoint is configured to handle POST requests. This is crucial as the GPT-trainer will send token data via POST requests for verification.
+2. **Configure for POST Requests:** Ensure that your API endpoint is configured to handle POST requests. This is crucial as the Chatsistant will send token data via POST requests for verification.
 
 <Frame>
   <img src="/images/user-identity-2.png" />
@@ -34,7 +34,7 @@ It is essential to set up an API endpoint that will handle the verification of u
 
 Here's what happens each time a chat is initiated:
 
-1. **Token Submission:** Whenever a chat is rendered, GPT-trainer automatically sends a verification request to the provided API endpoint. This request includes the user's token.
+1. **Token Submission:** Whenever a chat is rendered, Chatsistant automatically sends a verification request to the provided API endpoint. This request includes the user's token.
 
 2. **Processing the Request:** Your API endpoint should process this request, verifying the token's validity.
 
@@ -79,7 +79,7 @@ Example of valid JSON:
 }
 ```
 
-## Step 4: Inserting Your Token into GPT-trainer Chatbot
+## Step 4: Inserting Your Token into Chatsistant Chatbot
 
 ### Chat Widget
 
@@ -124,5 +124,5 @@ If there is a need to change the token, simply update the src attribute of the i
 
 Upon updating the token in the URL, the iframe will reload, ensuring that the new token is used for authentication.
 
-Congratulations! You have now successfully completed the setup of the User Identity Verification feature for your GPT-trainer Chatbot.
+Congratulations! You have now successfully completed the setup of the User Identity Verification feature for your Chatsistant Chatbot.
 By following the steps outlined in this guide, you have enabled a robust and secure method for authenticating users, ensuring a safe and reliable user experience.
