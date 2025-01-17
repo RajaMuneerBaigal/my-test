@@ -20,7 +20,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hello@gpt-trainer.com"
+      "url": "mailto:hello@chatsistant.com"
     }
   ],
   "primaryTab": {
@@ -36,7 +36,7 @@
       "name": "Tools",
       "icon": "gear",
       "api": {
-        "baseUrl": "https://tools.gpt-trainer.com/",
+        "baseUrl": "https://tools.chatsistant.com/",
         "auth": {
           "method": "bearer"
         }
